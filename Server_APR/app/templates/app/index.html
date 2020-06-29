@@ -1,0 +1,20 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+<div class="jumbotron">
+    <h1>Go To Riddle Menager</h1>
+    <p class="lead">Nothing Really Right Now</p>
+</div>
+<br />
+
+{% for sts in query_results %}
+
+{{sts.Riddle_text}} Odpowiedz: {{sts.Riddle_type}}<br>
+
+{% endfor %}
+
+
+{% endblock %}
+
