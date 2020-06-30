@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APR_APP.Views.RiddleLeader">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label x:Name="Labels_0" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="0"/>
+                <Label x:Name="Labels_1" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="1"/>
+                <Label x:Name="Labels_2" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="2"/>
+                <Label x:Name="Labels_3" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="3"/>
+                <Label x:Name="Labels_4" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="4"/>
+                <Label x:Name="Labels_5" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="5"/>
+                <Label x:Name="Labels_6" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="6"/>
+                <Label x:Name="Labels_7" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="7"/>
+                <Label x:Name="Labels_8" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="8"/>
+                <Label x:Name="Labels_9" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="9"/>
+                <Label x:Name="Labels_10" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="10"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

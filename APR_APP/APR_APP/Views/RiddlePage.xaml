@@ -7,9 +7,32 @@
              x:Class="APR_APP.Views.RiddlePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+                <Button x:Name="QuestionPass" Text="Question" Grid.Row="1" />
+                <Button x:Name="LeaderboardPass" Text="Leaderboard" Grid.Row="2" />
+                <Label x:Name="Labels" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="0"/>
+
+                <Label x:Name="RiddleText" Text="Don't click bellow yet" FontSize="Medium" Grid.Row ="3"/>
+                <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="4" />
+                <Button x:Name="GalleryButton" Text="Choose Photo From Gallery" Grid.Row="5" />
+                <Image x:Name="PhotoImage"  Grid.Row="7"/>
+                <Label x:Name="RiddleResult" Text="Result" FontSize="Medium" Grid.Row ="6"/>
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
