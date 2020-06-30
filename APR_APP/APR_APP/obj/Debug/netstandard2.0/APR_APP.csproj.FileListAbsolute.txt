@@ -26,3 +26,4 @@ C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\nets
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\APR_APP.csproj.CoreCompileInputs.cache
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\Views\RiddleLeader.xaml.g.cs
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\Views\ResultPage.xaml.g.cs

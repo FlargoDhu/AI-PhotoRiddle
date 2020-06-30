@@ -36,6 +36,9 @@
     <Compile Update="Views\FullApp.xaml.cs">
       <DependentUpon>FullApp.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\ResultPage.xaml.cs">
+      <DependentUpon>ResultPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\RiddleLeader.xaml.cs">
       <DependentUpon>RiddleLeader.xaml</DependentUpon>
     </Compile>
@@ -52,6 +55,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\FullApp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ResultPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\RiddleLeader.xaml">

@@ -22,6 +22,7 @@ namespace APR_APP.Views
         MqttFactory factory = new MqttFactory();
         IMqttClient mqttClient;
         string ID_RIDDLEUSER;
+        bool from_photo;
 
         static string subscriptionKey = "ec2d27ff7e28441381e9c180f6dc2806";
         static string endpoint = "https://flargoaprhavefun.cognitiveservices.azure.com/";
@@ -41,9 +42,8 @@ namespace APR_APP.Views
                 .WithTcpServer("10.0.0.103", 1883) // Port is optional
                 .Build();
 
-            
+            Connect(options);
 
-            System.Threading.Thread.Sleep(300);
 
             client = new HttpClient();
             client.DefaultRequestHeaders.Add("Host", "flargoaprhavefun.cognitiveservices.azure.com");
@@ -52,6 +52,21 @@ namespace APR_APP.Views
             GalleryButton.Clicked += GalleryButton_Clicked;
 
         }
+
+        /*protected async override void OnAppearing()
+        {
+            if (from_photo = false)
+            {
+                if (mqttClient.IsConnected)
+                {
+                    mqttClient.DisconnectAsync();
+                }
+                Connect(options);
+
+                reg_string = null;
+            }
+
+        }*/
         /*protected override void OnAppearing()
         {
             var options = new MqttClientOptionsBuilder()
@@ -81,7 +96,7 @@ namespace APR_APP.Views
                 if (e.ApplicationMessage.Topic == "APR/" + (ID_RIDDLEUSER) + "/" + "RIDDLE_RES")
                 {
                    reg_string = Encoding.UTF8.GetString(e.ApplicationMessage.Payload).Split('/');
-                    RiddleText.Text = reg_string[0] + " Odpowiedz: " + reg_string[1];  
+                   
                 }
             });
 
@@ -94,24 +109,29 @@ namespace APR_APP.Views
 
         private async void QuestionPass_Clicked(object sender, EventArgs e)
         {
-            await Connect(options);
+            
             if (mqttClient.IsConnected && reg_string == null)
             {
                 var message = new MqttApplicationMessageBuilder()
                     .WithTopic("APR/" + (ID_RIDDLEUSER) + "/" + "GEN_RIDDLE")
                     .Build();
-                 await mqttClient.PublishAsync(message, System.Threading.CancellationToken.None);
-                await mqttClient.DisconnectAsync();
+                await mqttClient.PublishAsync(message, System.Threading.CancellationToken.None);
+
+                //mqttClient.DisconnectAsync();
             }
             else
             {
-                 
-                 
+                RiddleText.Text = reg_string[0] + " Odpowiedz: " + reg_string[1];
+
             }
         }
 
         private async void LeaderboardPass_Clicked(object sender, EventArgs e)
         {
+            if (mqttClient.IsConnected)
+            {
+                await mqttClient.DisconnectAsync();
+            }
             await Navigation.PushModalAsync(new NavigationPage(new RiddleLeader()));
         }
 
@@ -119,34 +139,7 @@ namespace APR_APP.Views
         {
             if (reg_string != null)
             {
-                var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions()
-                {
-                    SaveToAlbum = true
-                });
-
-                if (photo != null)
-                {
-                    PhotoImage.Source = Xamarin.Forms.ImageSource.FromStream(() => { return photo.GetStream(); });
-
-                    string requesturi = "https://flargoaprhavefun.cognitiveservices.azure.com/vision/v3.0/analyze?visualFeatures=Objects&language=en";
-                    var response = await SendRequestAsync<Stream, string>(new HttpMethod("POST"), requesturi, photo.GetStream());
-                    if (value != null)
-                    {
-                        string random = "\"";
-                        var value_array = value.Split(new string[] { ":", random, "," }, StringSplitOptions.None);
-                    }
-                    Console.WriteLine(response);
-                
-                }
-            }
-        }
-
-        private async void GalleryButton_Clicked(object sender, EventArgs e)
-        {
-            if (reg_string != null)
-            {
-                var photo = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions() { });
-
+                var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions());
                 if (photo != null)
                 {
                     PhotoImage.Source = Xamarin.Forms.ImageSource.FromStream(() => { return photo.GetStream(); });
@@ -172,17 +165,21 @@ namespace APR_APP.Views
                         if(found == false)
                         {
                             RiddleResult.Text = "You lost";
+                            var photo_2 = Xamarin.Forms.ImageSource.FromStream(() => { return photo.GetStream(); });
+                            await Navigation.PushModalAsync(new NavigationPage(new ResultPage(photo_2, "You Lost")));
                         }
                         else
                         {
-                            await Connect(options);
+                            //Connect(options);
                             RiddleResult.Text = "You Won";
                             var message = new MqttApplicationMessageBuilder()
                                 .WithTopic("APR/" + (ID_RIDDLEUSER) + "/" + "UPDATE_SCORES")
                                 .WithPayload(reg_string[2]+"/"+reg_string[3]+"/"+"0")
                                 .Build();
-                            await mqttClient.PublishAsync(message, System.Threading.CancellationToken.None);
-                            await mqttClient.DisconnectAsync();
+                            mqttClient.PublishAsync(message, System.Threading.CancellationToken.None);
+                            //mqttClient.DisconnectAsync();
+                            var photo_2 = Xamarin.Forms.ImageSource.FromStream(() => { return photo.GetStream(); });
+                            await Navigation.PushModalAsync(new NavigationPage(new ResultPage(photo_2, "You Won")));
                         }
                         reg_string = null;
                         RiddleText.Text = "Press Question Again";
@@ -191,6 +188,65 @@ namespace APR_APP.Views
                     //Console.WriteLine(response);
                 }
             }
+            from_photo = false;
+        }
+
+        private async void GalleryButton_Clicked(object sender, EventArgs e)
+        {
+            if (reg_string != null)
+            {
+                from_photo = true;
+                var photo = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions() { });
+                
+                if (photo != null)
+                {
+                    PhotoImage.Source = Xamarin.Forms.ImageSource.FromStream(() => { return photo.GetStream(); });
+                    string requesturi = "https://flargoaprhavefun.cognitiveservices.azure.com/vision/v3.0/analyze?visualFeatures=Objects&language=en";
+                    var response = await SendRequestAsync<Stream, string>(new HttpMethod("POST"), requesturi, photo.GetStream());
+                    if (value != null)
+                    {
+                        string random = "\"";
+                        var value_array = value.Split(new string[] { ":", random, "," }, StringSplitOptions.None);
+                        var i = 0;
+                        bool found = false;
+                        foreach (string item in value_array)
+                        {
+                            Console.WriteLine(item);
+                            if(item == reg_string[1])
+                            {
+                                found = true;
+                                RiddleResult.Text = value_array[i+2].ToString();
+                                Console.WriteLine("Odpowiedz: " + value_array[i + 2].ToString());
+                            }
+                            i++;
+                        }
+                        if(found == false)
+                        {
+                            RiddleResult.Text = "You lost";
+                            var photo_2 = Xamarin.Forms.ImageSource.FromStream(() => { return photo.GetStream(); });
+                            await Navigation.PushModalAsync(new NavigationPage(new ResultPage(photo_2, "You Lost")));
+                        }
+                        else
+                        {
+                            //Connect(options);
+                            RiddleResult.Text = "You Won";
+                            var message = new MqttApplicationMessageBuilder()
+                                .WithTopic("APR/" + (ID_RIDDLEUSER) + "/" + "UPDATE_SCORES")
+                                .WithPayload(reg_string[2]+"/"+reg_string[3]+"/"+"0")
+                                .Build();
+                            mqttClient.PublishAsync(message, System.Threading.CancellationToken.None);
+                            //mqttClient.DisconnectAsync();
+                            var photo_2 = Xamarin.Forms.ImageSource.FromStream(() => { return photo.GetStream(); });
+                            await Navigation.PushModalAsync(new NavigationPage(new ResultPage(photo_2, "You Won")));
+                        }
+                        reg_string = null;
+                        RiddleText.Text = "Press Question Again";
+
+                    }
+                    //Console.WriteLine(response);
+                }
+            }
+            from_photo = false;
         }
 
         async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMethod, string requestUrl, TRequest requestBody)

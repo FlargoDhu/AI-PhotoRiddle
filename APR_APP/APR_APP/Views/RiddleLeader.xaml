@@ -20,8 +20,11 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
+
+                <Button x:Name="QuestionPass" Text="Back" Grid.Row="11" />
                 <Label x:Name="Labels_0" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="0"/>
                 <Label x:Name="Labels_1" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="1"/>
                 <Label x:Name="Labels_2" Text="RIDDLE TIME!?" FontSize="Medium" Grid.Row ="2"/>
