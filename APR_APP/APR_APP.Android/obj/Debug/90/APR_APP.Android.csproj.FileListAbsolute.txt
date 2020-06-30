@@ -513,3 +513,11 @@ C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\De
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ClipboardChangeListener.java
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorCallbackActivity.java
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\res\xml\file_paths.xml
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.CSharp.dll
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.CSharp.pdb
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.Rest.ClientRuntime.dll
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Buffers.dll
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.Azure.Management.CognitiveServices.dll

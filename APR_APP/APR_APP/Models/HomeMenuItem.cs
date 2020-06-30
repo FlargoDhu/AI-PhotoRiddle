@@ -8,7 +8,8 @@ namespace APR_APP.Models
     {
         Browse,
         Camera,
-        About
+        About,
+        App
     }
     public class HomeMenuItem
     {

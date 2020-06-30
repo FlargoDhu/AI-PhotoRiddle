@@ -16,9 +16,10 @@ C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\nets
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\ref\APR_APP.dll
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\APR_APP.pdb
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\Views\Camera.xaml.g.cs
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\APR_APP.csproj.CoreCompileInputs.cache
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\bin\Debug\netstandard2.0\Mono.Android.dll
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\bin\Debug\netstandard2.0\Mono.Android.pdb
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\bin\Debug\netstandard2.0\Mono.Android.xml
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\APR_APP.csproj.CopyComplete
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\APR_APP.csproj.CoreCompileInputs.cache
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP\obj\Debug\netstandard2.0\Views\FullApp.xaml.g.cs

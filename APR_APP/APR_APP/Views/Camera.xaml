@@ -7,16 +7,22 @@
              x:Class="APR_APP.Views.Camera">
     <ContentPage.Content>
         <StackLayout>
+            
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Image x:Name="PhotoImage" />
-                <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
-                <Button x:Name="GalleryButton" Text="Choose Photo From Gallery" Grid.Row="2" />
+                
+                <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="0" />
+                <Button x:Name="GalleryButton" Text="Choose Photo From Gallery" Grid.Row="1" />
+                <Image x:Name="PhotoImage" Grid.Row="3"/>
+                <Label x:Name="Labels" Text="Item description" FontSize="Medium" Grid.Row ="2"/>
             </Grid>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

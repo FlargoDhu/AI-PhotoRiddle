@@ -22,7 +22,8 @@ namespace APR_APP.Views
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
-                new HomeMenuItem {Id = MenuItemType.Camera, Title="Camera" }
+                new HomeMenuItem {Id = MenuItemType.Camera, Title="Camera" },
+                new HomeMenuItem {Id = MenuItemType.App, Title="Aplikacja"}
             };
 
             ListViewMenu.ItemsSource = menuItems;

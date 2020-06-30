@@ -39,6 +39,9 @@ namespace APR_APP.Views
                     case (int)MenuItemType.Camera:
                         MenuPages.Add(id, new NavigationPage(new Camera()));
                         break;
+                    case (int)MenuItemType.App:
+                        MenuPages.Add(id, new NavigationPage(new FullApp()));
+                        break;
                 }
             }
 
