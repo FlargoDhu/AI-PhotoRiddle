@@ -65,6 +65,9 @@
     <PackageReference Include="Microsoft.Azure.Management.CognitiveServices">
       <Version>7.3.0-preview</Version>
     </PackageReference>
+    <PackageReference Include="MQTTnet">
+      <Version>3.0.12-rc1</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
@@ -73,9 +76,6 @@
     </PackageReference>
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
-    </PackageReference>
-    <PackageReference Include="System.Net.Mqtt">
-      <Version>0.6.3-beta</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Media">
       <Version>5.0.1</Version>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +14,12 @@ namespace APR_APP.Views
         public AboutPage()
         {
             InitializeComponent();
+
+            if (File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "reg.txt")))
+            {
+                // If file found, delete it    
+                File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "reg.txt"));
+            }
         }
     }
 }

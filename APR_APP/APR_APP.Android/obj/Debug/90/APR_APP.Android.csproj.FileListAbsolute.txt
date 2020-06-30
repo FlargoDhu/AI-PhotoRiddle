@@ -463,22 +463,6 @@ C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\De
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\flata\79F7E8A7029CDB7F.flata
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Plugin.Media.dll
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Plugin.Media.pdb
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Collections.Concurrent.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Collections.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Diagnostics.Debug.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Diagnostics.Tracer.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Diagnostics.Tracer.dll.mdb
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Diagnostics.TraceSource.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Globalization.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Linq.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Net.Mqtt.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Net.Mqtt.pdb
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Reactive.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Reflection.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Runtime.Extensions.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Threading.dll
-C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Threading.Tasks.Extensions.dll
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\src\crc646957603ea1820544\MediaPickerActivity.java
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\flata\19844763B53520C5.stamp
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\flata\422417551F13E5CE.stamp
@@ -521,3 +505,4 @@ C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\De
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.Rest.ClientRuntime.dll
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\System.Buffers.dll
 C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\Microsoft.Azure.Management.CognitiveServices.dll
+C:\Users\DeithDhu\Documents\GitHub\AI-PhotoRiddle\APR_APP\APR_APP.Android\obj\Debug\90\android\assets\MQTTnet.dll

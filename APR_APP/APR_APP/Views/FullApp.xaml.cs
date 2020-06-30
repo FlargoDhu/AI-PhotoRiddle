@@ -10,26 +10,31 @@ using Xamarin.Forms.Xaml;
 
 namespace APR_APP.Views
 {
-
+    
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FullApp : ContentPage
     {
-       // private string filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "reg.txt");
+        private readonly string filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "reg.txt");
 
         public FullApp()
         {
             InitializeComponent();
 
-            /*if (File.Exists(filename))
+            
+
+        }
+
+        protected override void OnAppearing()
+        {
+            if (!File.Exists(filename))
             {
-                //Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+                Navigation.PushModalAsync(new NavigationPage(new RegisterPage()));
             }
             else
             {
-                //Navigation.PushModalAsync(new NavigationPage(new Camera()));
-            }*/
-
+                Navigation.PushModalAsync(new NavigationPage(new RiddlePage()));
+            }
         }
     }
 }
