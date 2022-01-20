@@ -24,8 +24,8 @@ namespace APR_APP.Views
         string ID_RIDDLEUSER;
         bool from_photo;
 
-        static string subscriptionKey = "ec2d27ff7e28441381e9c180f6dc2806";
-        static string endpoint = "https://flargoaprhavefun.cognitiveservices.azure.com/";
+        static string subscriptionKey = "Expired Key";
+        static string endpoint = "https://Expired_Link.cognitiveservices.azure.com/";
         private string value = null;
         private HttpClient client;
         IMqttClientOptions options;
